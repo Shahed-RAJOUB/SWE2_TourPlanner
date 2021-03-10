@@ -789,9 +789,9 @@ false Zulu
     <database id="2" parent="1" name="TourLogs">
       <ObjectId>16394</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>513</IntrospectionStateNumber>
+      <IntrospectionStateNumber>521</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|16395|16397|1
+      <Relations>sequence|table|16405|16407|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -868,7 +868,7 @@ UC/10
 </Acl>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>514</IntrospectionStateNumber>
+      <IntrospectionStateNumber>522</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="2" name="plpgsql">
@@ -969,48 +969,45 @@ UC/10
       <Type>index</Type>
     </access-method>
     <sequence id="30" parent="17" name="logs_id_seq">
-      <ObjectId>16395</ObjectId>
+      <ObjectId>16405</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>493</StateNumber>
+      <StateNumber>520</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <table id="31" parent="17" name="logs">
-      <ObjectId>16397</ObjectId>
+      <ObjectId>16407</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>493</StateNumber>
+      <StateNumber>520</StateNumber>
     </table>
     <column id="32" parent="31" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>493</StateNumber>
+      <StateNumber>520</StateNumber>
       <DefaultExpression>nextval(&apos;logs_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="33" parent="31" name="tourtitle">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>493</StateNumber>
+      <StateNumber>520</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="34" parent="31" name="tourdate">
       <Position>3</Position>
-      <DataType>timestamp|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>493</StateNumber>
-      <TypeId>1114</TypeId>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>520</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <column id="35" parent="31" name="tourdist">
       <Position>4</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>493</StateNumber>
-      <TypeId>23</TypeId>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>520</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <index id="36" parent="31" name="logs_pkey">
-      <ObjectId>16401</ObjectId>
-      <StateNumber>493</StateNumber>
+      <ObjectId>16411</ObjectId>
+      <StateNumber>520</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1019,8 +1016,8 @@ UC/10
       <ClassIds>1978</ClassIds>
     </index>
     <key id="37" parent="31" name="logs_pkey">
-      <ObjectId>16402</ObjectId>
-      <StateNumber>493</StateNumber>
+      <ObjectId>16412</ObjectId>
+      <StateNumber>520</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>logs_pkey</UnderlyingIndexName>

@@ -6,6 +6,8 @@ package org.openjfx;
  */
 
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
@@ -18,13 +20,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import org.openjfx.view_model.view_model_primary;
 
 
 public class PrimaryController implements Initializable {
 
-
-
+    dbContent myData = new dbContent();
     @FXML
     private DatePicker date;
 
@@ -47,20 +47,19 @@ public class PrimaryController implements Initializable {
     private TableColumn<Logs, String> tableTitle;
 
     @FXML
-    private TableColumn<Logs, LocalDate> tableDate;
+    private TableColumn<Logs, String> tableDate;
 
     @FXML
-    private TableColumn<Logs, Integer> tableDistance;
+    private TableColumn<Logs, String> tableDistance;
 
     @FXML
-    void addTour(ActionEvent event) {
-        //myData.configureConnection();
+    void addTour(ActionEvent event) throws SQLException {
+       if (event.getSource()==TourInsert){
+            InsertLog();
+       }
     }
 
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        dbContent myData = new dbContent();
+    public void logsList(){
         myData.configureConnection();
         ObservableList<Logs> list = myData.getlogs();
         tableId.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -68,6 +67,16 @@ public class PrimaryController implements Initializable {
         tableDate.setCellValueFactory(new PropertyValueFactory<>("tourdate"));
         tableDistance.setCellValueFactory(new PropertyValueFactory<>("tourdist"));
         tableLogs.setItems(list);
+    }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        logsList();
+
+    }
+    private void InsertLog() throws SQLException {
+        myData.configureConnection();
+        myData.insertNewLog(txtTitle.getText() , date.getValue().toString(), intDistance.getText());
+        logsList();
     }
 }

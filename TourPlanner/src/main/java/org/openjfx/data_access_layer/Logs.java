@@ -10,12 +10,12 @@ import lombok.*;
 @NoArgsConstructor
 public class Logs {
 
-    private Integer id;
-    private String tourtitle;
-    private String tourdate;
-    private Integer tourdist;
+    public Integer id;
+    public String tourtitle;
+    public String tourdate;
+    public String tourdist;
 
-    public Logs(int id, String tourtitle, String tourdate, int tourdist) {
+    public Logs(int id, String tourtitle, String tourdate, String tourdist) {
         this.id = id;
         this.tourtitle = tourtitle;
         this.tourdate = tourdate;

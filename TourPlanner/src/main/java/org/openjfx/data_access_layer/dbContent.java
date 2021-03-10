@@ -6,10 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.Data;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 
 @Data
 @Getter
@@ -27,24 +24,6 @@ public class dbContent {
             System.exit(0);
         }
     }
-//    public boolean InsertLog(Logs log) throws SQLException {
-//
-//        configureConnection();
-//        String query1 = "INSERT INTO LOGS ( tourtitle , tourdate , tourdist) VALUES (?, ?, ?)";
-//        PreparedStatement statement = c.prepareStatement(query1);
-//        statement.setString(1, log.getTourTitle() );
-//        statement.setString(2, log.getTourDate().toString());
-//        statement.setInt(3, log.getTourDist());
-//        statement.executeUpdate();
-//        c.commit();
-//        closeConnection(statement);
-//        return true;
-//       }
-//
-//        private void closeConnection(PreparedStatement statement) throws SQLException  {
-//            statement.close();
-//            c.close();
-//        }
 
     public ObservableList<Logs> getlogs() {
 
@@ -58,7 +37,7 @@ public class dbContent {
             rs = statement.executeQuery();
             Logs logs;
             while(rs.next()){
-                logs = new Logs(rs.getInt("id") , rs.getString("tourtitle") , rs.getString("tourdate") , rs.getInt("tourdist") );
+                logs = new Logs(rs.getInt("id") , rs.getString("tourtitle") , rs.getString("tourdate") , rs.getString("tourdist") );
                 logsList.add(logs);
             }
         }catch (Exception e)
@@ -68,5 +47,17 @@ public class dbContent {
             System.exit(0);
         }
         return logsList;
+    }
+
+    public void insertNewLog(String title , String date , String dist) throws SQLException {
+        configureConnection();
+        String query1 = "INSERT INTO LOGS ( tourtitle , tourdate , tourdist) VALUES (?, ?, ?)";
+        PreparedStatement statement = c.prepareStatement(query1);
+        statement.setString(1,title );
+        statement.setString(2,date);
+        statement.setString(3, dist);
+        statement.executeUpdate();
+        c.commit();
+        statement.close();
     }
 }
