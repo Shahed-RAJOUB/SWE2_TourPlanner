@@ -49,6 +49,13 @@ public class dbContent {
         return logsList;
     }
 
+    /**
+     *
+     * @param title
+     * @param date
+     * @param dist
+     * @throws SQLException
+     */
     public void insertNewLog(String title , String date , String dist) throws SQLException {
         configureConnection();
         String query1 = "INSERT INTO LOGS ( tourtitle , tourdate , tourdist) VALUES (?, ?, ?)";
