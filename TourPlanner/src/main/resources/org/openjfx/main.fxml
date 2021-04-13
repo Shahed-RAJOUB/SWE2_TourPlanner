@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="761.0"
+      prefWidth="1044.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.openjfx.views.MainController">
+    <MenuBar prefHeight="33.0" prefWidth="600.0" style="-fx-background-color: #9FA8DA;" BorderPane.alignment="CENTER">
+        <menus>
+            <Menu fx:id="menuFile" mnemonicParsing="false" style="color: black;" text="File">
+                <items>
+                    <MenuItem fx:id="getReport" mnemonicParsing="false" text="Report"/>
+                </items>
+            </Menu>
+            <Menu fx:id="menuEdit" mnemonicParsing="false" text="Edit">
+                <items>
+                    <MenuItem fx:id="editTour" mnemonicParsing="false" text="Edit Tours"/>
+                    <MenuItem fx:id="deleteTour" mnemonicParsing="false" text="Delete Tours"/>
+                    <MenuItem fx:id="editLogs" mnemonicParsing="false" text="Edit Logs"/>
+                    <MenuItem fx:id="deleteLogs" mnemonicParsing="false" text="Delete Logs"/>
+                </items>
+            </Menu>
+            <Menu fx:id="menuHelp" mnemonicParsing="false" text="Help">
+                <items>
+                    <MenuItem fx:id="about" mnemonicParsing="false" text="About"/>
+                    <MenuItem fx:id="maintainer" mnemonicParsing="false" text="Maintainer"/>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <fx:include source="searchBarView.fxml" fx:id="searchView"/>
+    <SplitPane dividerPositions="0.3" VBox.vgrow="ALWAYS">
+    <fx:include source="tourListView.fxml" fx:id="toursView"/>
+    <fx:include source="logsView.fxml" fx:id="logsView"/>
+    </SplitPane>
+    <ButtonBar prefHeight="44.0" prefWidth="600.0" style="-fx-background-color: #9FA8DA;"
+               BorderPane.alignment="CENTER"/>
+</VBox>
