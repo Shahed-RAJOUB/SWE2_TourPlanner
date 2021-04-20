@@ -6,12 +6,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.openjfx.view_model.ViewModelSearch;
+import org.springframework.stereotype.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
+@Controller
+@RequiredArgsConstructor
 @Setter
 @Getter
 public class SearchViewController implements Initializable {
@@ -21,7 +25,7 @@ public class SearchViewController implements Initializable {
     @FXML
     public Button searchButton;
 
-    private final ViewModelSearch viewModelSearch = new ViewModelSearch();
+    private final ViewModelSearch viewModelSearch;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

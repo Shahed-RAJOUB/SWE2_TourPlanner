@@ -8,7 +8,9 @@ import javafx.beans.property.StringProperty;
 import javafx.beans.value.ObservableValue;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.stereotype.Component;
 
+@Component
 @Getter
 @Setter
 public class ViewModelSearch {

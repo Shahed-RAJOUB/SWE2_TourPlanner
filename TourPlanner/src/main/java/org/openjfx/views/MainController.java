@@ -4,24 +4,18 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.openjfx.view_model.ViewModelMain;
+import org.springframework.stereotype.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
+@Controller
+@RequiredArgsConstructor
 @Getter
 @Setter
 public class MainController implements Initializable {
-
-    @FXML
-    private SearchViewController searchViewController;
-
-    @FXML
-    private ToursViewController toursViewController;
-
-    @FXML
-    private LogsViewController logsViewController;
 
     @FXML
     private Menu menuFile;
@@ -53,11 +47,9 @@ public class MainController implements Initializable {
     @FXML
     private MenuItem maintainer;
 
-    private final ViewModelMain viewModelMain = new ViewModelMain();
+    private final ViewModelMain viewModelMain;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-      viewModelMain.setViewModelSearch(searchViewController.getViewModelSearch());
-      viewModelMain.setViewModelTours(toursViewController.getViewModelTours());
-      viewModelMain.setViewModelLogs(logsViewController.getViewModelLogs());
+
     }
 }

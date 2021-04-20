@@ -9,12 +9,17 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.openjfx.view_model.Log;
 import org.openjfx.view_model.ViewModelLogs;
+import org.springframework.stereotype.Controller;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
+@Controller
+@RequiredArgsConstructor
 @Getter
 @Setter
 public class LogsViewController implements Initializable {
@@ -47,7 +52,7 @@ public class LogsViewController implements Initializable {
     @FXML
     private Button AddLog;
 
-    private final ViewModelLogs viewModelLogs = new ViewModelLogs();
+    private final ViewModelLogs viewModelLogs;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 //        tableLogs.setItems(viewModelLogs.GetLogs());

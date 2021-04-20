@@ -2,23 +2,31 @@ package org.openjfx.view_model;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import org.openjfx.business_layer.ToursService;
+import org.springframework.stereotype.Component;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
+@Component
+@RequiredArgsConstructor
 @Getter
 @Setter
 public class ViewModelTours {
-/*    private ObservableList<Tour> observableTours = FXCollections.observableArrayList();
+    private final ToursService toursService;
+    private ObservableList<Tour> observableTours = FXCollections.observableArrayList();
 
-    public void SetTours(List<Tour> tours){
-        var tourItems = tours.stream().map(t->new Tour(t.getTourName())).collect(Collectors.toList());
-        observableTours.clear();
-        observableTours.addAll(tourItems);
+    public ObservableList<Tour> getTours() {
+        observableTours = (ObservableList<Tour>) toursService.GetTours();
+        return observableTours;
     }
+
+    public void init(){
+        observableTours.addAll(getTours());
+    }
+/*
 
     public void insertTour() {
         myData.configureConnection();
