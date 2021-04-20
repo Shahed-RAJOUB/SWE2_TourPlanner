@@ -46,7 +46,7 @@ false Africa/Brazzaville
 false Africa/Bujumbura
 false Africa/Cairo
 false Africa/Casablanca
-false Africa/Ceuta
+true Africa/Ceuta
 false Africa/Conakry
 false Africa/Dakar
 false Africa/Dar_es_Salaam
@@ -85,8 +85,8 @@ false Africa/Timbuktu
 false Africa/Tripoli
 false Africa/Tunis
 false Africa/Windhoek
-false America/Adak
-false America/Anchorage
+true America/Adak
+true America/Anchorage
 false America/Anguilla
 false America/Antigua
 false America/Araguaina
@@ -104,28 +104,28 @@ false America/Argentina/San_Luis
 false America/Argentina/Tucuman
 false America/Argentina/Ushuaia
 false America/Aruba
-true America/Asuncion
+false America/Asuncion
 false America/Atikokan
-false America/Atka
+true America/Atka
 false America/Bahia
-false America/Bahia_Banderas
+true America/Bahia_Banderas
 false America/Barbados
 false America/Belem
 false America/Belize
 false America/Blanc-Sablon
 false America/Boa_Vista
 false America/Bogota
-false America/Boise
+true America/Boise
 false America/Buenos_Aires
-false America/Cambridge_Bay
+true America/Cambridge_Bay
 false America/Campo_Grande
 false America/Cancun
 false America/Caracas
 false America/Catamarca
 false America/Cayenne
 false America/Cayman
-false America/Chicago
-false America/Chihuahua
+true America/Chicago
+true America/Chihuahua
 false America/Coral_Harbour
 false America/Cordoba
 false America/Costa_Rica
@@ -135,139 +135,139 @@ false America/Curacao
 false America/Danmarkshavn
 false America/Dawson
 false America/Dawson_Creek
-false America/Denver
-false America/Detroit
+true America/Denver
+true America/Detroit
 false America/Dominica
-false America/Edmonton
+true America/Edmonton
 false America/Eirunepe
 false America/El_Salvador
-false America/Ensenada
+true America/Ensenada
 false America/Fort_Nelson
-false America/Fort_Wayne
+true America/Fort_Wayne
 false America/Fortaleza
-false America/Glace_Bay
-false America/Godthab
-false America/Goose_Bay
-false America/Grand_Turk
+true America/Glace_Bay
+true America/Godthab
+true America/Goose_Bay
+true America/Grand_Turk
 false America/Grenada
 false America/Guadeloupe
 false America/Guatemala
 false America/Guayaquil
 false America/Guyana
-false America/Halifax
-false America/Havana
+true America/Halifax
+true America/Havana
 false America/Hermosillo
-false America/Indiana/Indianapolis
-false America/Indiana/Knox
-false America/Indiana/Marengo
-false America/Indiana/Petersburg
-false America/Indiana/Tell_City
-false America/Indiana/Vevay
-false America/Indiana/Vincennes
-false America/Indiana/Winamac
-false America/Indianapolis
-false America/Inuvik
-false America/Iqaluit
+true America/Indiana/Indianapolis
+true America/Indiana/Knox
+true America/Indiana/Marengo
+true America/Indiana/Petersburg
+true America/Indiana/Tell_City
+true America/Indiana/Vevay
+true America/Indiana/Vincennes
+true America/Indiana/Winamac
+true America/Indianapolis
+true America/Inuvik
+true America/Iqaluit
 false America/Jamaica
 false America/Jujuy
-false America/Juneau
-false America/Kentucky/Louisville
-false America/Kentucky/Monticello
-false America/Knox_IN
+true America/Juneau
+true America/Kentucky/Louisville
+true America/Kentucky/Monticello
+true America/Knox_IN
 false America/Kralendijk
 false America/La_Paz
 false America/Lima
-false America/Los_Angeles
-false America/Louisville
+true America/Los_Angeles
+true America/Louisville
 false America/Lower_Princes
 false America/Maceio
 false America/Managua
 false America/Manaus
 false America/Marigot
 false America/Martinique
-false America/Matamoros
-false America/Mazatlan
+true America/Matamoros
+true America/Mazatlan
 false America/Mendoza
-false America/Menominee
-false America/Merida
-false America/Metlakatla
-false America/Mexico_City
-false America/Miquelon
-false America/Moncton
-false America/Monterrey
+true America/Menominee
+true America/Merida
+true America/Metlakatla
+true America/Mexico_City
+true America/Miquelon
+true America/Moncton
+true America/Monterrey
 false America/Montevideo
-false America/Montreal
+true America/Montreal
 false America/Montserrat
-false America/Nassau
-false America/New_York
-false America/Nipigon
-false America/Nome
+true America/Nassau
+true America/New_York
+true America/Nipigon
+true America/Nome
 false America/Noronha
-false America/North_Dakota/Beulah
-false America/North_Dakota/Center
-false America/North_Dakota/New_Salem
-false America/Nuuk
-false America/Ojinaga
+true America/North_Dakota/Beulah
+true America/North_Dakota/Center
+true America/North_Dakota/New_Salem
+true America/Nuuk
+true America/Ojinaga
 false America/Panama
-false America/Pangnirtung
+true America/Pangnirtung
 false America/Paramaribo
 false America/Phoenix
-false America/Port-au-Prince
+true America/Port-au-Prince
 false America/Port_of_Spain
 false America/Porto_Acre
 false America/Porto_Velho
 false America/Puerto_Rico
 false America/Punta_Arenas
-false America/Rainy_River
-false America/Rankin_Inlet
+true America/Rainy_River
+true America/Rankin_Inlet
 false America/Recife
 false America/Regina
-false America/Resolute
+true America/Resolute
 false America/Rio_Branco
 false America/Rosario
-false America/Santa_Isabel
+true America/Santa_Isabel
 false America/Santarem
-true America/Santiago
+false America/Santiago
 false America/Santo_Domingo
 false America/Sao_Paulo
-false America/Scoresbysund
-false America/Shiprock
-false America/Sitka
+true America/Scoresbysund
+true America/Shiprock
+true America/Sitka
 false America/St_Barthelemy
-false America/St_Johns
+true America/St_Johns
 false America/St_Kitts
 false America/St_Lucia
 false America/St_Thomas
 false America/St_Vincent
 false America/Swift_Current
 false America/Tegucigalpa
-false America/Thule
-false America/Thunder_Bay
-false America/Tijuana
-false America/Toronto
+true America/Thule
+true America/Thunder_Bay
+true America/Tijuana
+true America/Toronto
 false America/Tortola
-false America/Vancouver
+true America/Vancouver
 false America/Virgin
 false America/Whitehorse
-false America/Winnipeg
-false America/Yakutat
-false America/Yellowknife
+true America/Winnipeg
+true America/Yakutat
+true America/Yellowknife
 false Antarctica/Casey
 false Antarctica/Davis
 false Antarctica/DumontDUrville
-true Antarctica/Macquarie
+false Antarctica/Macquarie
 false Antarctica/Mawson
-true Antarctica/McMurdo
+false Antarctica/McMurdo
 false Antarctica/Palmer
 false Antarctica/Rothera
-true Antarctica/South_Pole
+false Antarctica/South_Pole
 false Antarctica/Syowa
-false Antarctica/Troll
+true Antarctica/Troll
 false Antarctica/Vostok
-false Arctic/Longyearbyen
+true Arctic/Longyearbyen
 false Asia/Aden
 false Asia/Almaty
-false Asia/Amman
+true Asia/Amman
 false Asia/Anadyr
 false Asia/Aqtau
 false Asia/Aqtobe
@@ -279,7 +279,7 @@ false Asia/Bahrain
 false Asia/Baku
 false Asia/Bangkok
 false Asia/Barnaul
-false Asia/Beirut
+true Asia/Beirut
 false Asia/Bishkek
 false Asia/Brunei
 false Asia/Calcutta
@@ -289,15 +289,15 @@ false Asia/Chongqing
 false Asia/Chungking
 false Asia/Colombo
 false Asia/Dacca
-false Asia/Damascus
+true Asia/Damascus
 false Asia/Dhaka
 false Asia/Dili
 false Asia/Dubai
 false Asia/Dushanbe
-false Asia/Famagusta
-false Asia/Gaza
+true Asia/Famagusta
+true Asia/Gaza
 false Asia/Harbin
-false Asia/Hebron
+true Asia/Hebron
 false Asia/Ho_Chi_Minh
 false Asia/Hong_Kong
 false Asia/Hovd
@@ -305,7 +305,7 @@ false Asia/Irkutsk
 false Asia/Istanbul
 false Asia/Jakarta
 false Asia/Jayapura
-false Asia/Jerusalem
+true Asia/Jerusalem
 false Asia/Kabul
 false Asia/Kamchatka
 false Asia/Karachi
@@ -324,7 +324,7 @@ false Asia/Magadan
 false Asia/Makassar
 false Asia/Manila
 false Asia/Muscat
-false Asia/Nicosia
+true Asia/Nicosia
 false Asia/Novokuznetsk
 false Asia/Novosibirsk
 false Asia/Omsk
@@ -347,8 +347,8 @@ false Asia/Srednekolymsk
 false Asia/Taipei
 false Asia/Tashkent
 false Asia/Tbilisi
-false Asia/Tehran
-false Asia/Tel_Aviv
+true Asia/Tehran
+true Asia/Tel_Aviv
 false Asia/Thimbu
 false Asia/Thimphu
 false Asia/Tokyo
@@ -364,41 +364,41 @@ false Asia/Yakutsk
 false Asia/Yangon
 false Asia/Yekaterinburg
 false Asia/Yerevan
-false Atlantic/Azores
-false Atlantic/Bermuda
-false Atlantic/Canary
+true Atlantic/Azores
+true Atlantic/Bermuda
+true Atlantic/Canary
 false Atlantic/Cape_Verde
-false Atlantic/Faeroe
-false Atlantic/Faroe
-false Atlantic/Jan_Mayen
-false Atlantic/Madeira
+true Atlantic/Faeroe
+true Atlantic/Faroe
+true Atlantic/Jan_Mayen
+true Atlantic/Madeira
 false Atlantic/Reykjavik
 false Atlantic/South_Georgia
 false Atlantic/St_Helena
 false Atlantic/Stanley
-true Australia/ACT
-true Australia/Adelaide
+false Australia/ACT
+false Australia/Adelaide
 false Australia/Brisbane
-true Australia/Broken_Hill
-true Australia/Canberra
-true Australia/Currie
+false Australia/Broken_Hill
+false Australia/Canberra
+false Australia/Currie
 false Australia/Darwin
 false Australia/Eucla
-true Australia/Hobart
-true Australia/LHI
+false Australia/Hobart
+false Australia/LHI
 false Australia/Lindeman
-true Australia/Lord_Howe
-true Australia/Melbourne
-true Australia/NSW
+false Australia/Lord_Howe
+false Australia/Melbourne
+false Australia/NSW
 false Australia/North
 false Australia/Perth
 false Australia/Queensland
-true Australia/South
-true Australia/Sydney
-true Australia/Tasmania
-true Australia/Victoria
+false Australia/South
+false Australia/Sydney
+false Australia/Tasmania
+false Australia/Victoria
 false Australia/West
-true Australia/Yancowinna
+false Australia/Yancowinna
 true BDST
 false BDT
 false BNT
@@ -425,26 +425,26 @@ false CHAST
 false CHUT
 false CKT
 true CLST
-true CLT
+false CLT
 false COT
 false CST
-false CST6CDT
+true CST6CDT
 false CXT
-false Canada/Atlantic
-false Canada/Central
-false Canada/Eastern
-false Canada/Mountain
-false Canada/Newfoundland
-false Canada/Pacific
+true Canada/Atlantic
+true Canada/Central
+true Canada/Eastern
+true Canada/Mountain
+true Canada/Newfoundland
+true Canada/Pacific
 false Canada/Saskatchewan
 false Canada/Yukon
-true Chile/Continental
-true Chile/EasterIsland
-false Cuba
+false Chile/Continental
+false Chile/EasterIsland
+true Cuba
 false DAVT
 false DDUT
-true EASST
-true EAST
+false EASST
+false EAST
 false EAT
 true EDT
 true EEST
@@ -453,9 +453,9 @@ true EETDST
 true EGST
 false EGT
 false EST
-false EST5EDT
+true EST5EDT
 false Egypt
-true Eire
+false Eire
 false Etc/GMT
 false Etc/GMT+0
 false Etc/GMT+1
@@ -491,69 +491,69 @@ false Etc/UCT
 false Etc/UTC
 false Etc/Universal
 false Etc/Zulu
-false Europe/Amsterdam
-false Europe/Andorra
+true Europe/Amsterdam
+true Europe/Andorra
 false Europe/Astrakhan
-false Europe/Athens
-false Europe/Belfast
-false Europe/Belgrade
-false Europe/Berlin
-false Europe/Bratislava
-false Europe/Brussels
-false Europe/Bucharest
-false Europe/Budapest
-false Europe/Busingen
-false Europe/Chisinau
-false Europe/Copenhagen
-true Europe/Dublin
-false Europe/Gibraltar
-false Europe/Guernsey
-false Europe/Helsinki
-false Europe/Isle_of_Man
+true Europe/Athens
+true Europe/Belfast
+true Europe/Belgrade
+true Europe/Berlin
+true Europe/Bratislava
+true Europe/Brussels
+true Europe/Bucharest
+true Europe/Budapest
+true Europe/Busingen
+true Europe/Chisinau
+true Europe/Copenhagen
+false Europe/Dublin
+true Europe/Gibraltar
+true Europe/Guernsey
+true Europe/Helsinki
+true Europe/Isle_of_Man
 false Europe/Istanbul
-false Europe/Jersey
+true Europe/Jersey
 false Europe/Kaliningrad
-false Europe/Kiev
+true Europe/Kiev
 false Europe/Kirov
-false Europe/Lisbon
-false Europe/Ljubljana
-false Europe/London
-false Europe/Luxembourg
-false Europe/Madrid
-false Europe/Malta
-false Europe/Mariehamn
+true Europe/Lisbon
+true Europe/Ljubljana
+true Europe/London
+true Europe/Luxembourg
+true Europe/Madrid
+true Europe/Malta
+true Europe/Mariehamn
 false Europe/Minsk
-false Europe/Monaco
+true Europe/Monaco
 false Europe/Moscow
-false Europe/Nicosia
-false Europe/Oslo
-false Europe/Paris
-false Europe/Podgorica
-false Europe/Prague
-false Europe/Riga
-false Europe/Rome
+true Europe/Nicosia
+true Europe/Oslo
+true Europe/Paris
+true Europe/Podgorica
+true Europe/Prague
+true Europe/Riga
+true Europe/Rome
 false Europe/Samara
-false Europe/San_Marino
-false Europe/Sarajevo
+true Europe/San_Marino
+true Europe/Sarajevo
 false Europe/Saratov
 false Europe/Simferopol
-false Europe/Skopje
-false Europe/Sofia
-false Europe/Stockholm
-false Europe/Tallinn
-false Europe/Tirane
-false Europe/Tiraspol
+true Europe/Skopje
+true Europe/Sofia
+true Europe/Stockholm
+true Europe/Tallinn
+true Europe/Tirane
+true Europe/Tiraspol
 false Europe/Ulyanovsk
-false Europe/Uzhgorod
-false Europe/Vaduz
-false Europe/Vatican
-false Europe/Vienna
-false Europe/Vilnius
+true Europe/Uzhgorod
+true Europe/Vaduz
+true Europe/Vatican
+true Europe/Vienna
+true Europe/Vilnius
 false Europe/Volgograd
-false Europe/Warsaw
-false Europe/Zagreb
-false Europe/Zaporozhye
-false Europe/Zurich
+true Europe/Warsaw
+true Europe/Zagreb
+true Europe/Zaporozhye
+true Europe/Zurich
 false FET
 true FJST
 false FJT
@@ -564,8 +564,8 @@ false FNT
 false Factory
 false GALT
 false GAMT
-false GB
-false GB-Eire
+true GB
+true GB-Eire
 false GEST
 false GET
 false GFT
@@ -598,8 +598,8 @@ false Indian/Maldives
 false Indian/Mauritius
 false Indian/Mayotte
 false Indian/Reunion
-false Iran
-false Israel
+true Iran
+true Israel
 false JAYT
 false JST
 false Jamaica
@@ -612,7 +612,7 @@ false KRAST
 false KRAT
 false KST
 false Kwajalein
-true LHDT
+false LHDT
 false LHST
 false LIGT
 false LINT
@@ -625,7 +625,7 @@ false MAWT
 true MDT
 true MEST
 true MESZ
-false MET
+true MET
 true METDST
 false MEZ
 false MHT
@@ -634,14 +634,14 @@ false MPT
 true MSD
 false MSK
 false MST
-false MST7MDT
+true MST7MDT
 true MUST
 false MUT
 false MVT
 false MYT
-false Mexico/BajaNorte
-false Mexico/BajaSur
-false Mexico/General
+true Mexico/BajaNorte
+true Mexico/BajaSur
+true Mexico/General
 true NDT
 false NFT
 false NOVST
@@ -649,12 +649,12 @@ false NOVT
 false NPT
 false NST
 false NUT
-true NZ
-true NZ-CHAT
+false NZ
+false NZ-CHAT
 true NZDT
 false NZST
 false NZT
-false Navajo
+true Navajo
 false OMSST
 false OMST
 true PDT
@@ -671,16 +671,16 @@ false PMST
 false PONT
 false PRC
 false PST
-false PST8PDT
+true PST8PDT
 false PWT
 true PYST
-true PYT
-true Pacific/Apia
-true Pacific/Auckland
+false PYT
+false Pacific/Apia
+false Pacific/Auckland
 false Pacific/Bougainville
-true Pacific/Chatham
+false Pacific/Chatham
 false Pacific/Chuuk
-true Pacific/Easter
+false Pacific/Easter
 false Pacific/Efate
 false Pacific/Enderbury
 false Pacific/Fakaofo
@@ -700,7 +700,7 @@ false Pacific/Marquesas
 false Pacific/Midway
 false Pacific/Nauru
 false Pacific/Niue
-true Pacific/Norfolk
+false Pacific/Norfolk
 false Pacific/Noumea
 false Pacific/Pago_Pago
 false Pacific/Palau
@@ -718,8 +718,8 @@ false Pacific/Truk
 false Pacific/Wake
 false Pacific/Wallis
 false Pacific/Yap
-false Poland
-false Portugal
+true Poland
+true Portugal
 false RET
 false ROC
 false ROK
@@ -740,17 +740,17 @@ false Turkey
 false UCT
 true ULAST
 false ULAT
-false US/Alaska
-false US/Aleutian
+true US/Alaska
+true US/Aleutian
 false US/Arizona
-false US/Central
-false US/East-Indiana
-false US/Eastern
+true US/Central
+true US/East-Indiana
+true US/Eastern
 false US/Hawaii
-false US/Indiana-Starke
-false US/Michigan
-false US/Mountain
-false US/Pacific
+true US/Indiana-Starke
+true US/Michigan
+true US/Mountain
+true US/Pacific
 false US/Samoa
 false UT
 false UTC
@@ -770,7 +770,7 @@ false WAKT
 false WAST
 false WAT
 true WDT
-false WET
+true WET
 true WETDST
 false WFT
 true WGST
@@ -784,21 +784,21 @@ false YEKT
 false Z
 false Zulu
 </TimeZones>
-      <StartupTime>1615181231</StartupTime>
+      <StartupTime>1617610296</StartupTime>
     </root>
     <database id="2" parent="1" name="TourLogs">
       <ObjectId>16394</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>521</IntrospectionStateNumber>
+      <IntrospectionStateNumber>579</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|16405|16407|1
+      <Relations>sequence|table|24586|24588|1
+sequence|table|24595|24597|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
       <ObjectId>13442</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>506</IntrospectionStateNumber>
     </database>
     <role id="4" parent="1" name="pg_execute_server_program">
       <ObjectId>4571</ObjectId>
@@ -868,7 +868,7 @@ UC/10
 </Acl>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>522</IntrospectionStateNumber>
+      <IntrospectionStateNumber>580</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="2" name="plpgsql">
@@ -968,59 +968,85 @@ UC/10
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <sequence id="30" parent="17" name="logs_id_seq">
-      <ObjectId>16405</ObjectId>
+    <sequence id="30" parent="17" name="Logs_id_seq">
+      <ObjectId>24595</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>520</StateNumber>
+      <StateNumber>563</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
-    <table id="31" parent="17" name="logs">
-      <ObjectId>16407</ObjectId>
+    <sequence id="31" parent="17" name="Tours_id_seq">
+      <ObjectId>24586</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>520</StateNumber>
+      <StateNumber>557</StateNumber>
+      <DataType>integer|0s</DataType>
+    </sequence>
+    <table id="32" parent="17" name="Logs">
+      <ObjectId>24597</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>575</StateNumber>
     </table>
-    <column id="32" parent="31" name="id">
+    <table id="33" parent="17" name="Tours">
+      <ObjectId>24588</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>557</StateNumber>
+    </table>
+    <column id="34" parent="32" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>520</StateNumber>
-      <DefaultExpression>nextval(&apos;logs_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>563</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;Logs_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="33" parent="31" name="tourtitle">
+    <column id="35" parent="32" name="date">
       <Position>2</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <StateNumber>520</StateNumber>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>563</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="34" parent="31" name="tourdate">
+    <column id="36" parent="32" name="duration">
       <Position>3</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <StateNumber>520</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>563</StateNumber>
+      <TypeId>701</TypeId>
     </column>
-    <column id="35" parent="31" name="tourdist">
+    <column id="37" parent="32" name="destination">
       <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>520</StateNumber>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>563</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="38" parent="32" name="calories">
+      <Position>5</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>563</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="39" parent="32" name="url">
+      <Position>6</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>563</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="36" parent="31" name="logs_pkey">
-      <ObjectId>16411</ObjectId>
-      <StateNumber>520</StateNumber>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-      <Primary>1</Primary>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationIds>0</CollationIds>
-      <ClassIds>1978</ClassIds>
-    </index>
-    <key id="37" parent="31" name="logs_pkey">
-      <ObjectId>16412</ObjectId>
-      <StateNumber>520</StateNumber>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>logs_pkey</UnderlyingIndexName>
-    </key>
+    <column id="40" parent="32" name="tour_name">
+      <Position>7</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>575</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>557</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;Tours_id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="42" parent="33" name="tourName">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>557</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
   </database-model>
 </dataSource>
