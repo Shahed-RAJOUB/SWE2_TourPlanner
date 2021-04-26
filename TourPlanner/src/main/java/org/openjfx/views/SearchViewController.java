@@ -29,10 +29,11 @@ public class SearchViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-/*        search.textProperty().bindBidirectional(viewModelSearch.searchStringProperty());
-        searchButton.disableProperty().bind(viewModelSearch.searchDisabledBinding());*/
     }
     public void onSearch(ActionEvent actionEvent) {
-        //business Logic to find
+        if(actionEvent.getSource()==searchButton){
+            viewModelSearch.searchLists(search.getText());
+            getSearch().setText(null);
+        }
     }
 }

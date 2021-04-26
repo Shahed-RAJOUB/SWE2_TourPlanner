@@ -42,7 +42,7 @@ public class LogDAO implements LogDataAccess {
     @Override
     public void insertNewLog(String date, Float duration, Float destination, String tourName) throws SQLException {
         float calories = 6 * (duration / 60) * 80;
-        String query1 = "INSERT INTO \"Logs\" VALUES (?, ?, ? , ? , ? , ?)";
+        String query1 = "INSERT INTO \"Logs\" VALUES (DEFAULT , ?, ?, ? , ? , ? , ?)";
         PreparedStatement statement = connection.getC().prepareStatement(query1);
         statement.setString(1, date);
         statement.setFloat(2, duration);

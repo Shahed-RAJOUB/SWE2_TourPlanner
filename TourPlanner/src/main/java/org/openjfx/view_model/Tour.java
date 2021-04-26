@@ -2,11 +2,13 @@ package org.openjfx.view_model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.List;
 
 @Setter
 @Getter
+
 public class Tour {
     public int tourId;
     public String tourName;
@@ -17,7 +19,8 @@ public class Tour {
         this.tourName = tourName;
     }
 
-    public Tour(String tourName) {
-        this.tourName = tourName;
+    @Override
+    public String toString() {
+        return this.tourName;
     }
 }

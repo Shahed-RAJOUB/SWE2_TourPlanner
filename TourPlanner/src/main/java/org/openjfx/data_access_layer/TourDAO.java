@@ -39,7 +39,7 @@ public class TourDAO implements TourDataAccess {
     }
     @Override
     public void insertNewTour(String tourName) throws SQLException {
-        String query1 = "INSERT INTO \"Tours\" VALUES (?)";
+        String query1 = "INSERT INTO \"Tours\" VALUES (DEFAULT , ?)";
         PreparedStatement statement = connection.getC().prepareStatement(query1);
         statement.setString(1, tourName);
         statement.executeUpdate();

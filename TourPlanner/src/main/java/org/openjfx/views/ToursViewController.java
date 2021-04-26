@@ -6,9 +6,11 @@ package org.openjfx.views;
  */
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
+import javafx.collections.ObservableList;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -38,15 +40,17 @@ public class ToursViewController implements Initializable {
     private final ViewModelTours viewModelTours;
 
     @FXML
-    void addTour(ActionEvent event) {
-      /* if (event.getSource()==AddTour){
-           viewModelTours.insertTour();
-       }*/
+    void addTour(ActionEvent event) throws SQLException {
+      if(event.getSource()==AddTour){
+           viewModelTours.insertTour(TourName.getText());
+           getTourName().setText(null);
+       }
     }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        viewModelTours.init();
+        toursList.setItems(viewModelTours.getTours());
+
     }
 }

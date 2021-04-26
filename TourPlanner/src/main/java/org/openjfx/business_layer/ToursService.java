@@ -5,6 +5,7 @@ import org.openjfx.data_access_layer.TourDAO;
 import org.openjfx.view_model.Tour;
 import org.springframework.stereotype.Component;
 
+import java.sql.SQLException;
 import java.util.List;
 
 @Component
@@ -24,5 +25,8 @@ public class ToursService{
         return tours.stream()
                 .filter(t -> t.getTourName().toLowerCase().contains(searchText.toLowerCase()))
                 .collect(java.util.stream.Collectors.toList());
+    }
+    public void insertTour(String tour) throws SQLException {
+        tourDAO.insertNewTour(tour);
     }
 }

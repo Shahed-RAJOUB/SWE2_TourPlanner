@@ -7,28 +7,28 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ObservableValue;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import org.openjfx.business_layer.LogsService;
+import org.openjfx.business_layer.ToursService;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 @Getter
 @Setter
 public class ViewModelSearch {
-    private ViewModelMain viewModelMain;
+    private final ToursService toursService;
+    private final LogsService logsService;
 
-    private final StringProperty searchString = new SimpleStringProperty("");
-    private final BooleanBinding isSearchDisabledBinding = Bindings.createBooleanBinding( ()-> searchString.get().isEmpty());
-
-
-    public ViewModelSearch() {
+/*    public ViewModelSearch() {
         searchString.addListener((arg, oldVal, newVal)->isSearchDisabledBinding.invalidate());
-    }
+    }*/
 
-    public Property<String> searchStringProperty() {
-        return searchString;
-    }
-
-    public ObservableValue<Boolean> searchDisabledBinding() {
-        return isSearchDisabledBinding;
+    public void searchLists( String search) {
+        if(search!=null) {
+            var tours = toursService.searchTours(search);
+            var logs = logsService.searchLogs(search);
+        }
     }
 }

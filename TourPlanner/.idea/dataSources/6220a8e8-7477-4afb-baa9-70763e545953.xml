@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="TourLog">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.20">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.21">
     <root id="1">
       <ServerVersion>13.1</ServerVersion>
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+13441||-9223372036854775808|c|G
+13441||10|c|G
+13441||10|C|G
+13441||10|T|G</Grants>
       <DateStyle>dmy</DateStyle>
       <TimeZones>true ACDT
 true ACSST
@@ -45,14 +53,14 @@ false Africa/Blantyre
 false Africa/Brazzaville
 false Africa/Bujumbura
 false Africa/Cairo
-false Africa/Casablanca
+true Africa/Casablanca
 true Africa/Ceuta
 false Africa/Conakry
 false Africa/Dakar
 false Africa/Dar_es_Salaam
 false Africa/Djibouti
 false Africa/Douala
-false Africa/El_Aaiun
+true Africa/El_Aaiun
 false Africa/Freetown
 false Africa/Gaborone
 false Africa/Harare
@@ -784,12 +792,22 @@ false YEKT
 false Z
 false Zulu
 </TimeZones>
-      <StartupTime>1617610296</StartupTime>
+      <StartupTime>1618909652</StartupTime>
     </root>
     <database id="2" parent="1" name="TourLogs">
       <ObjectId>16394</ObjectId>
+      <Grants>11||10|C|G
+11||-9223372036854775808|U|G
+11||10|U|G
+2200||-9223372036854775808|C|G
+2200||10|C|G
+2200||-9223372036854775808|U|G
+2200||10|U|G
+13158||10|C|G
+13158||-9223372036854775808|U|G
+13158||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>579</IntrospectionStateNumber>
+      <IntrospectionStateNumber>597</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24586|24588|1
 sequence|table|24595|24597|1
@@ -805,6 +823,9 @@ sequence|table|24595|24597|1
     </role>
     <role id="5" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
+      <RoleGrants>3374
+3375
+3377</RoleGrants>
     </role>
     <role id="6" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
@@ -845,30 +866,21 @@ sequence|table|24595|24597|1
     </tablespace>
     <schema id="15" parent="2" name="information_schema">
       <ObjectId>13158</ObjectId>
-      <Acl>10=UC/10
-U/10
-</Acl>
       <StateNumber>293</StateNumber>
       <Owner>postgres</Owner>
     </schema>
     <schema id="16" parent="2" name="pg_catalog">
       <ObjectId>11</ObjectId>
       <Comment>system catalog schema</Comment>
-      <Acl>10=UC/10
-U/10
-</Acl>
       <StateNumber>286</StateNumber>
       <Owner>postgres</Owner>
     </schema>
     <schema id="17" parent="2" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
-      <Acl>10=UC/10
-UC/10
-</Acl>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>580</IntrospectionStateNumber>
+      <IntrospectionStateNumber>597</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="2" name="plpgsql">
@@ -1045,8 +1057,26 @@ UC/10
     <column id="42" parent="33" name="tourName">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>557</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
+    <index id="43" parent="33" name="tours_pk">
+      <ObjectId>24610</ObjectId>
+      <StateNumber>581</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>1978</ClassIds>
+    </index>
+    <key id="44" parent="33" name="tours_pk">
+      <ObjectId>24611</ObjectId>
+      <StateNumber>581</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>tours_pk</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

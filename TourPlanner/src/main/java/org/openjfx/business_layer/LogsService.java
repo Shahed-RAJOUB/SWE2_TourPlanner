@@ -5,6 +5,7 @@ import org.openjfx.data_access_layer.LogDAO;
 import org.openjfx.view_model.Log;
 import org.springframework.stereotype.Component;
 
+import java.sql.SQLException;
 import java.util.List;
 
 @Component
@@ -24,5 +25,8 @@ public class LogsService  {
         return logs.stream()
                 .filter(t -> t.getTourName().toLowerCase().contains(searchText.toLowerCase()))
                 .collect(java.util.stream.Collectors.toList());
+    }
+    public void insertLog(String date , Float duration , Float destination , String tourname) throws SQLException {
+        logDAO.insertNewLog(date , duration , destination, tourname);
     }
 }
