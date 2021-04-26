@@ -5,9 +5,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.SneakyThrows;
 import org.openjfx.view_model.Log;
 import org.openjfx.view_model.ViewModelLogs;
 import org.springframework.stereotype.Controller;
@@ -22,7 +24,8 @@ import java.util.ResourceBundle;
 @Setter
 public class LogsViewController implements Initializable {
 
-
+    @FXML
+    private ImageView urlImage;
 
     @FXML
     private TableView<Log> tableLogs;
@@ -56,6 +59,7 @@ public class LogsViewController implements Initializable {
 
     private final ViewModelLogs viewModelLogs;
 
+    @SneakyThrows
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tableLogs.setItems(viewModelLogs.getLogs());
@@ -63,6 +67,7 @@ public class LogsViewController implements Initializable {
         tableDuration.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getDuration()));
         tableDistance.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getDest()));
         BurnedCalories.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getBurnedCalories()));
+        urlImage.setImage(viewModelLogs.getImage());
     }
 
     public void addLog(ActionEvent event) throws SQLException {

@@ -1,15 +1,18 @@
 package org.openjfx.util;
 
 
+import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.image.Image;
 import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.io.InputStream;
+
 @Builder
 @Component
 @RequiredArgsConstructor
@@ -35,7 +38,7 @@ public class MapquestApiService {
          */
 
         InputStream responseStream = http.getInputStream();
-        OutputStream os = new FileOutputStream("src/main/java/org/openjfx/views/images");
+        OutputStream os = new FileOutputStream("test.jpg");
 
         byte[] b = new byte[2048];
         int length;
@@ -47,6 +50,12 @@ public class MapquestApiService {
         responseStream.close();
         os.close();
         http.disconnect();
+
     }
 
+    public Image GetImageFromFile() throws IOException {
+        BufferedImage img = ImageIO.read(new File("test.jpg"));
+        Image image = SwingFXUtils.toFXImage(img, null);
+        return image;
+    }
 }
