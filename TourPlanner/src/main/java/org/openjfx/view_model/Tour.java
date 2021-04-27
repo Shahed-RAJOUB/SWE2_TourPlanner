@@ -1,14 +1,14 @@
 package org.openjfx.view_model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 
 @Setter
 @Getter
-
+@Builder
+@EqualsAndHashCode
+@AllArgsConstructor
 public class Tour {
     public int tourId;
     public String tourName;

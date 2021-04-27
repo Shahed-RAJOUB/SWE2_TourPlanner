@@ -1,7 +1,7 @@
 package org.openjfx.data_access_layer;
 
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j;
 import org.openjfx.config.DatabaseConfig;
 import org.springframework.stereotype.Component;
 
@@ -10,15 +10,18 @@ import java.sql.DriverManager;
 
 @Data
 @Component
+@Log4j
 public class DbContent {
+
     private Connection c;
     public DbContent() {
         try {
-            c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/TourLogs", DatabaseConfig.getInstance().getUserName(), DatabaseConfig.getInstance().getPassword());
+            DatabaseConfig data = DatabaseConfig.getInstance();
+            c = DriverManager.getConnection(data.getUrl(), data.getUserName(), data.getPassword());
             c.setAutoCommit(false);
         } catch (Exception e) {
             e.printStackTrace();
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+            log.error(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
         }
     }

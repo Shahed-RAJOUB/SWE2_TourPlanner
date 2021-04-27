@@ -16,6 +16,9 @@ import java.io.File;
 @NoArgsConstructor
 public class DatabaseConfig {
     @JsonProperty
+    private String url;
+
+    @JsonProperty
     private String userName;
 
     @JsonProperty
