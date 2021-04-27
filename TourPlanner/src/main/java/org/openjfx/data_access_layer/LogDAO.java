@@ -54,4 +54,33 @@ public class LogDAO implements LogDataAccess {
         connection.getC().commit();
         statement.close();
     }
+
+    @Override
+    public void deleteLog(int id) throws SQLException {
+        String query1 = "DELETE FROM \"Logs\" WHERE \"id\" = ?";
+        PreparedStatement statement = connection.getC().prepareStatement(query1);
+        statement.setInt(1, id);
+        statement.executeUpdate();
+        connection.getC().commit();
+        statement.close();
+    }
+
+    @Override
+    public void copyLog(String date, Float duration, Float destination, String tourName) throws SQLException {
+        insertNewLog(date,duration ,destination ,tourName);
+    }
+
+    @Override
+    public void EditTLog(String date, Float duration, Float destination, String tourName, int id) throws SQLException {
+        String query1 = "UPDATE \"Logs\" SET \"date\"=?,\"duration\"=?,\"destination\"=? ,\"tour_name\"=? WHERE \"id\"=? ";
+        PreparedStatement statement = connection.getC().prepareStatement(query1);
+        statement.setString(1, date);
+        statement.setFloat(2, duration);
+        statement.setFloat(3, destination);
+        statement.setString(4, tourName);
+        statement.setInt(5, id);
+        statement.executeUpdate();
+        connection.getC().commit();
+        statement.close();
+    }
 }

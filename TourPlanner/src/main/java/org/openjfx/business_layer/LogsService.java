@@ -17,16 +17,17 @@ public class LogsService  {
         return logDAO.GetLogs();
     }
 
-    public List<Log> searchLogs(String searchText) {
-        var logs = logDAO.GetLogs();
-        if(searchText == null || searchText.isEmpty()){
-            return logs;
-        }
-        return logs.stream()
-                .filter(t -> t.getTourName().toLowerCase().contains(searchText.toLowerCase()))
-                .collect(java.util.stream.Collectors.toList());
-    }
     public void insertLog(String date , Float duration , Float destination , String tourname) throws SQLException {
         logDAO.insertNewLog(date , duration , destination, tourname);
     }
+
+    public void deleteLog(int id) throws SQLException{
+        logDAO.deleteLog(id);
+    }
+   public void copyLog(String date, Float duration, Float destination, String tourName) throws SQLException{
+        logDAO.copyLog(date,duration,destination,tourName);
+   }
+   public void EditTLog(String date, Float duration, Float destination, String tourName , int id) throws SQLException{
+        logDAO.EditTLog(date,duration,destination,tourName,id);
+   }
 }

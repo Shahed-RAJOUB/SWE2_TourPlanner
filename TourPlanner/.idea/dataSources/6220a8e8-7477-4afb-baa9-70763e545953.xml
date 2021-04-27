@@ -792,7 +792,7 @@ false YEKT
 false Z
 false Zulu
 </TimeZones>
-      <StartupTime>1618909652</StartupTime>
+      <StartupTime>1619449187</StartupTime>
     </root>
     <database id="2" parent="1" name="TourLogs">
       <ObjectId>16394</ObjectId>
@@ -807,7 +807,7 @@ false Zulu
 13158||-9223372036854775808|U|G
 13158||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>597</IntrospectionStateNumber>
+      <IntrospectionStateNumber>615</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24586|24588|1
 sequence|table|24595|24597|1
@@ -880,7 +880,7 @@ sequence|table|24595|24597|1
       <Comment>standard public schema</Comment>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>597</IntrospectionStateNumber>
+      <IntrospectionStateNumber>616</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="2" name="plpgsql">
@@ -1000,7 +1000,7 @@ sequence|table|24595|24597|1
     <table id="33" parent="17" name="Tours">
       <ObjectId>24588</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>557</StateNumber>
+      <StateNumber>614</StateNumber>
     </table>
     <column id="34" parent="32" name="id">
       <Position>1</Position>
@@ -1046,7 +1046,24 @@ sequence|table|24595|24597|1
       <StateNumber>575</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="41" parent="33" name="id">
+    <index id="41" parent="32" name="logs_pk">
+      <ObjectId>24612</ObjectId>
+      <StateNumber>597</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>1978</ClassIds>
+    </index>
+    <key id="42" parent="32" name="logs_pk">
+      <ObjectId>24613</ObjectId>
+      <StateNumber>597</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>logs_pk</UnderlyingIndexName>
+    </key>
+    <column id="43" parent="33" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1054,14 +1071,26 @@ sequence|table|24595|24597|1
       <DefaultExpression>nextval(&apos;&quot;Tours_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="42" parent="33" name="tourName">
+    <column id="44" parent="33" name="tourName">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="43" parent="33" name="tours_pk">
+    <column id="45" parent="33" name="from">
+      <Position>4</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>613</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="46" parent="33" name="to">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>614</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="47" parent="33" name="tours_pk">
       <ObjectId>24610</ObjectId>
       <StateNumber>581</StateNumber>
       <ColNames>id</ColNames>
@@ -1071,7 +1100,7 @@ sequence|table|24595|24597|1
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="44" parent="33" name="tours_pk">
+    <key id="48" parent="33" name="tours_pk">
       <ObjectId>24611</ObjectId>
       <StateNumber>581</StateNumber>
       <ColNames>id</ColNames>

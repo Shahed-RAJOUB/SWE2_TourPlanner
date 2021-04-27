@@ -14,6 +14,7 @@ import org.openjfx.view_model.Log;
 import org.openjfx.view_model.ViewModelLogs;
 import org.springframework.stereotype.Controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -26,7 +27,8 @@ public class LogsViewController implements Initializable {
 
     @FXML
     private ImageView urlImage;
-
+    @FXML
+    private Button Print;
     @FXML
     private TableView<Log> tableLogs;
 
@@ -56,7 +58,26 @@ public class LogsViewController implements Initializable {
 
     @FXML
     private Button AddLog;
+    @FXML
+    private DatePicker LogNewDate;
 
+    @FXML
+    private TextField LogNewDuration;
+
+    @FXML
+    private TextField LogNewDestination;
+
+    @FXML
+    private TextField LogNewTour;
+
+    @FXML
+    private Button EditLog;
+
+    @FXML
+    private Button DeleteLog;
+
+    @FXML
+    private Button CopyLog;
     private final ViewModelLogs viewModelLogs;
 
     @SneakyThrows
@@ -77,6 +98,33 @@ public class LogsViewController implements Initializable {
            getLogDuration().setText(null);
            getLogDestination().setText(null);
            getLogTour().setText(null);
+        }
+    }
+    @FXML
+    void  deleteLog(ActionEvent event)throws SQLException {
+        if(event.getSource()==DeleteLog){
+            viewModelLogs.deleteLog(getSelectedLog().getId());
+        }
+    }
+    @FXML
+    void  copyLog(ActionEvent event)throws SQLException {
+        if(event.getSource()==CopyLog){
+            viewModelLogs.copyLog(getSelectedLog().getDate(),getSelectedLog().getDuration(),getSelectedLog().getDest(),getSelectedLog().getTourName());
+        }
+    }
+    @FXML
+    void  EditLog(ActionEvent event)throws SQLException {
+        if(event.getSource()==EditLog){
+            viewModelLogs.EditTLog(LogNewDate.getValue().toString() , LogNewDuration.getText() , LogNewDestination.getText() , LogNewTour.getText() , getSelectedLog().getId());
+        }
+    }
+    Log getSelectedLog() {
+        return tableLogs.getSelectionModel().getSelectedItem();
+    }
+
+    public void print(ActionEvent event) throws IOException {
+        if(event.getSource()==Print){
+            viewModelLogs.getPdf();
         }
     }
 }

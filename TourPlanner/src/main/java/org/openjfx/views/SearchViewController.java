@@ -31,7 +31,7 @@ public class SearchViewController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
     }
     public void onSearch(ActionEvent actionEvent) {
-        if(actionEvent.getSource()==searchButton){
+        if(actionEvent.getSource().equals(searchButton)){
             viewModelSearch.searchLists(search.getText());
             getSearch().setText(null);
         }

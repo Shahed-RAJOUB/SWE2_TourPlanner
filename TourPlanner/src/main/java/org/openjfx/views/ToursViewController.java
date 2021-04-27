@@ -36,21 +36,62 @@ public class ToursViewController implements Initializable {
 
     @FXML
     private Button AddTour;
+    @FXML
+    private TextField TourFrom;
+
+    @FXML
+    private TextField TourTo;
+    @FXML
+    private TextField TourNewName;
+
+    @FXML
+    private Button EditTour;
+    @FXML
+    private TextField TourNewFrom;
+
+    @FXML
+    private TextField TourNewTo;
+    @FXML
+    private Button DeleteTour;
+
+    @FXML
+    private Button CopyTour;
 
     private final ViewModelTours viewModelTours;
 
     @FXML
     void addTour(ActionEvent event) throws SQLException {
       if(event.getSource()==AddTour){
-           viewModelTours.insertTour(TourName.getText());
+           viewModelTours.insertTour(TourName.getText(),TourFrom.getText(),TourTo.getText());
            getTourName().setText(null);
+           getTourFrom().setText(null);
+           getTourTo().setText(null);
        }
     }
-
-
+    @FXML
+    void  deleteTour(ActionEvent event)throws SQLException {
+        if(event.getSource()==DeleteTour){
+          viewModelTours.delete(getSelectedTour().getTourName());
+        }
+    }
+    @FXML
+    void  copyTour(ActionEvent event)throws SQLException {
+        if(event.getSource()==CopyTour){
+            viewModelTours.copyTour(getSelectedTour().getTourName(),getSelectedTour().getFrom(),getSelectedTour().getTo());
+        }
+    }
+    @FXML
+    void  EditTour(ActionEvent event)throws SQLException {
+        if(event.getSource()==EditTour){
+            viewModelTours.editTour(TourNewName.getText(),TourNewFrom.getText(),TourNewTo.getText() , getSelectedTour().getTourName());
+        }
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         toursList.setItems(viewModelTours.getTours());
 
+    }
+    Tour getSelectedTour() {
+        return toursList.getSelectionModel().getSelectedItem();
     }
 }

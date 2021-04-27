@@ -12,11 +12,15 @@ import java.util.List;
 public class Tour {
     public int tourId;
     public String tourName;
+    public String from;
+    public String to;
     public List<Log> tourLogs;
 
-    public Tour(int tourId , String tourName) {
+    public Tour(int tourId , String tourName , String from , String to) {
         this.tourId = tourId;
         this.tourName = tourName;
+        this.from = from;
+        this.to = to;
     }
 
     @Override

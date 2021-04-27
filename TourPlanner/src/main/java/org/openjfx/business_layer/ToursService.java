@@ -16,17 +16,16 @@ public class ToursService{
     public List<Tour> GetTours() {
         return tourDAO.GetTours();
     }
-
-    public List<Tour> searchTours(String searchText) {
-        var tours = tourDAO.GetTours();
-        if(searchText == null || searchText.isEmpty()){
-            return tours;
-        }
-        return tours.stream()
-                .filter(t -> t.getTourName().toLowerCase().contains(searchText.toLowerCase()))
-                .collect(java.util.stream.Collectors.toList());
+    public void insertTour(String tour , String from , String to) throws SQLException {
+        tourDAO.insertNewTour(tour,from,to);
     }
-    public void insertTour(String tour) throws SQLException {
-        tourDAO.insertNewTour(tour);
+    public void copyTour(String tour , String from , String to) throws SQLException {
+        tourDAO.copyTour(tour,from,to);
+    }
+    public void editTour(String tour , String from , String to , String old) throws SQLException {
+        tourDAO.EditTour(tour,from,to , old);
+    }
+    public void deleteTour(String tour) throws SQLException {
+        tourDAO.deleteTour(tour);
     }
 }
