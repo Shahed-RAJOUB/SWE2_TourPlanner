@@ -18,6 +18,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import lombok.extern.log4j.Log4j;
+import org.apache.log4j.Logger;
 import org.openjfx.view_model.Tour;
 import org.openjfx.view_model.ViewModelTours;
 import org.springframework.stereotype.Controller;
@@ -26,6 +28,7 @@ import org.springframework.stereotype.Controller;
 @RequiredArgsConstructor
 @Getter
 @Setter
+@Log4j
 public class ToursViewController implements Initializable {
 
     @FXML
@@ -88,6 +91,7 @@ public class ToursViewController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        log.info("to edit in tourViewController");
         toursList.setItems(viewModelTours.getTours());
 
     }

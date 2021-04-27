@@ -13,8 +13,8 @@
 <VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.views.ToursViewController">
    <ButtonBar prefHeight="42.0" prefWidth="241.0">
      <buttons>
-       <Button fx:id="DeleteTour" mnemonicParsing="false" text="Delete" onAction="#deleteTour" />
-         <Button fx:id="CopyTour" minWidth="52.0" mnemonicParsing="false" prefHeight="26.0" text="Copy" onAction="#copyTour" />
+       <Button fx:id="DeleteTour" mnemonicParsing="false" onAction="#deleteTour" text="Delete" />
+         <Button fx:id="CopyTour" minWidth="52.0" mnemonicParsing="false" onAction="#copyTour" prefHeight="26.0" text="Copy" />
      </buttons>
    </ButtonBar>
 <TabPane tabClosingPolicy="UNAVAILABLE">
@@ -28,7 +28,7 @@
                   <children>
                      <Label layoutX="26.0" layoutY="57.0" text="Label" />
                      <TextField fx:id="TourName" layoutX="20.0" layoutY="85.0" />
-                     <Button fx:id="AddTour" layoutX="117.0" layoutY="237.0" mnemonicParsing="false" onAction="#addTour" text="Button" />
+                     <Button fx:id="AddTour" layoutX="117.0" layoutY="237.0" mnemonicParsing="false" onAction="#addTour" text="insert" />
                      <Label layoutX="26.0" layoutY="121.0" text="From" />
                      <TextField fx:id="TourFrom" layoutX="20.0" layoutY="146.0" />
                      <Label layoutX="26.0" layoutY="182.0" text="To" />
@@ -43,7 +43,7 @@
                 <children>
                     <Label layoutX="26.0" layoutY="57.0" text="Change Name" />
                     <TextField fx:id="TourNewName" layoutX="20.0" layoutY="85.0" />
-                    <Button fx:id="EditTour" layoutX="112.0" layoutY="236.0" mnemonicParsing="false" onAction="#EditTour" text="Button" />
+                    <Button fx:id="EditTour" layoutX="112.0" layoutY="236.0" mnemonicParsing="false" onAction="#EditTour" text="change" />
                      <Label layoutX="26.0" layoutY="122.0" text="Change start point" />
                      <TextField fx:id="TourNewFrom" layoutX="20.0" layoutY="140.0" />
                      <Label layoutX="26.0" layoutY="174.0" text="Change destination" />

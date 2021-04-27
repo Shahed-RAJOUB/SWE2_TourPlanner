@@ -4,12 +4,14 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.*;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.SneakyThrows;
+import lombok.extern.log4j.Log4j;
 import org.openjfx.view_model.Log;
 import org.openjfx.view_model.ViewModelLogs;
 import org.springframework.stereotype.Controller;
@@ -23,12 +25,22 @@ import java.util.ResourceBundle;
 @RequiredArgsConstructor
 @Getter
 @Setter
+@Log4j
 public class LogsViewController implements Initializable {
 
     @FXML
     private ImageView urlImage;
     @FXML
     private Button Print;
+
+    @FXML
+    private CategoryAxis X;
+
+    @FXML
+    private NumberAxis Y;
+    @FXML
+    private LineChart<?, ?> LineChart;
+
     @FXML
     private TableView<Log> tableLogs;
 
@@ -83,6 +95,7 @@ public class LogsViewController implements Initializable {
     @SneakyThrows
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        log.info("to edit in logViewController");
         tableLogs.setItems(viewModelLogs.getLogs());
         tableDate.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getDate()));
         tableDuration.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getDuration()));
@@ -90,7 +103,7 @@ public class LogsViewController implements Initializable {
         BurnedCalories.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getBurnedCalories()));
         urlImage.setImage(viewModelLogs.getImage());
     }
-
+    @FXML
     public void addLog(ActionEvent event) throws SQLException {
         if(event.getSource()==AddLog){
             viewModelLogs.insertLog(LogDate.getValue().toString() , LogDuration.getText() , LogDestination.getText(), LogTour.getText());

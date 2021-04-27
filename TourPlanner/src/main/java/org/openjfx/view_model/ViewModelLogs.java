@@ -2,6 +2,7 @@ package org.openjfx.view_model;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.chart.XYChart;
 import javafx.scene.image.Image;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -57,4 +58,5 @@ public class ViewModelLogs {
     public void getPdf() throws IOException {
         pdfGenerator.DownloadPdf();
     }
+
 }
