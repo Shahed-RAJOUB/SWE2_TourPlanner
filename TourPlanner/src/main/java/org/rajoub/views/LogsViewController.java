@@ -101,12 +101,12 @@ public class LogsViewController implements Initializable {
         tableLogs.setItems(viewModelLogs.getLogs());
         visibleLogs();
     }
-    public void visibleLogs() throws IOException {
+    public void visibleLogs() {
         tableDate.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getDate()));
         tableDuration.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getDuration()));
         tableDistance.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getDest()));
         BurnedCalories.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getBurnedCalories()));
-        urlImage.setImage(viewModelLogs.getImage());
+        urlImage.imageProperty().bind(viewModelLogs.getImagTour());
     }
     @FXML
     public void addLog(ActionEvent event) throws SQLException {

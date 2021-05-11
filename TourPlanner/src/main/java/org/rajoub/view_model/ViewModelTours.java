@@ -10,6 +10,7 @@ import org.rajoub.business_layer.ToursService;
 import org.rajoub.model.Tour;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 
@@ -54,6 +55,14 @@ public class ViewModelTours {
         if(tourName!=null) {
             viewModelLogs.getSearchedLogs().setPredicate(l -> l.getTourName().toLowerCase().contains(tourName.toLowerCase()));
             viewModelLogs.getLogs();
+        }
+    }
+
+    public void setRout(String from, String to) throws IOException {
+        if(from != null) {
+            viewModelLogs.getFrom().setValue(from);
+            viewModelLogs.getTo().setValue(to);
+            viewModelLogs.getImage();
         }
     }
 }

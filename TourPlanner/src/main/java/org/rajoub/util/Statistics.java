@@ -1,5 +1,6 @@
-package org.rajoub.util;
+package org.openjfx.util;
 
+import javafx.scene.chart.XYChart;
 import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

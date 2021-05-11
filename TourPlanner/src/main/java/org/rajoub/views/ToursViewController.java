@@ -5,6 +5,7 @@ package org.rajoub.views;
  * @implNote Email : < if19b166@technikum-wien.at>
  */
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -100,8 +101,10 @@ public class ToursViewController implements Initializable {
         return toursList.getSelectionModel().getSelectedItem();
     }
     @FXML
-    public void handleMouseClick(MouseEvent mouseEvent) {
+    public void handleMouseClick(MouseEvent mouseEvent) throws IOException {
         if( getSelectedTour() != null){
-            viewModelTours.setLogs(getSelectedTour().getTourName());}
+            viewModelTours.setLogs(getSelectedTour().getTourName());
+            viewModelTours.setRout(getSelectedTour().getFrom(),getSelectedTour().getTo() );
+        }
     }
 }

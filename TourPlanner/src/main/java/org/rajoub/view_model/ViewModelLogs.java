@@ -1,5 +1,6 @@
 package org.rajoub.view_model;
 
+import javafx.beans.property.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -9,7 +10,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.rajoub.business_layer.LogsService;
 import org.rajoub.model.Log;
-import org.rajoub.model.Tour;
 import org.rajoub.util.MapquestApiService;
 import org.rajoub.util.PdfGenerator;
 import org.springframework.stereotype.Component;
@@ -26,6 +26,9 @@ public class ViewModelLogs {
     private final PdfGenerator pdfGenerator;
     private ObservableList<Log> observableLogs = FXCollections.observableArrayList();
     FilteredList<Log> searchedLogs = new FilteredList<>(observableLogs, s -> true);
+    private  final StringProperty from = new SimpleStringProperty();
+    private final StringProperty to = new SimpleStringProperty();
+    private final ObjectProperty<Image> imagTour = new SimpleObjectProperty<>();
 
     public ObservableList<Log> getLogs() {
         observableLogs.clear();
@@ -41,8 +44,13 @@ public class ViewModelLogs {
     }
 
     public Image getImage() throws IOException {
-        mapquestApiService.GetImage();
-       return   mapquestApiService.GetImageFromFile();
+        if(getFrom() != null) {
+            mapquestApiService.GetImage(getFrom(), getTo());
+            getImagTour().setValue(mapquestApiService.GetImageFromFile());
+            return mapquestApiService.GetImageFromFile();
+
+        }
+        return null;
     }
     public void deleteLog(int id) throws SQLException{
         logsService.deleteLog(id);
@@ -62,5 +70,6 @@ public class ViewModelLogs {
     public void getPdf() throws IOException {
         pdfGenerator.DownloadPdf();
     }
+
 
 }

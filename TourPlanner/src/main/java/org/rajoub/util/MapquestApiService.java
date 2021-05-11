@@ -1,5 +1,6 @@
 package org.rajoub.util;
 
+import javafx.beans.property.StringProperty;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import lombok.Builder;
@@ -16,12 +17,15 @@ import java.net.URL;
 @RequiredArgsConstructor
 public class MapquestApiService {
 
-    public void GetImage() throws IOException {
+    public void GetImage(StringProperty from, StringProperty to) throws IOException {
         /**
          * We can create an HttpUrlConnection instance using the openConnection() method of the URL class.
          * a connection to a given URL using GET method
          */
-        URL url = new URL("https://www.mapquestapi.com/staticmap/v5/map?start=Wien&end=Zeiselmauer,%20Austria&size=300,200@2x&key=SHSDJSLYJHAzO1Gw0ztvr8PTThk5upYH");
+        String start = from.getValue();
+        String end = to.getValue();
+        if(start != null){
+        URL url = new URL("https://www.mapquestapi.com/staticmap/v5/map?start="+start+"&end="+end+",%20Austria&size=300,200@2x&key=SHSDJSLYJHAzO1Gw0ztvr8PTThk5upYH");
         HttpURLConnection http = (HttpURLConnection) url.openConnection();
         http.setRequestMethod("GET");
         /**
@@ -48,7 +52,7 @@ public class MapquestApiService {
         responseStream.close();
         os.close();
         http.disconnect();
-
+        }
     }
 
     public Image GetImageFromFile() throws IOException {
