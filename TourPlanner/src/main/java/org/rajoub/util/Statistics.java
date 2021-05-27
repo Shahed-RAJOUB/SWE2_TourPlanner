@@ -1,4 +1,4 @@
-package org.openjfx.util;
+package org.rajoub.util;
 
 import javafx.scene.chart.XYChart;
 import lombok.Builder;
@@ -10,6 +10,12 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class Statistics {
     public void getChart(){
+
+    }
+    public void exportJS(){
+
+    }
+    public void importJS(){
 
     }
 }

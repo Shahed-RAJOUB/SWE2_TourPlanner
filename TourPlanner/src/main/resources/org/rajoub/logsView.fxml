@@ -35,7 +35,7 @@
                 </Tab>
                 <Tab text="Description">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <AnchorPane fx:id="export" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
                            <Button fx:id="Print" layoutX="644.0" layoutY="118.0" mnemonicParsing="false" onAction="#print" text="Print full report" />
                            <LineChart fx:id="LineChart" layoutX="59.0" layoutY="34.0" prefHeight="218.0" prefWidth="405.0">
@@ -49,6 +49,8 @@
                            <Label layoutX="223.0" layoutY="25.0" text="Progress Chart" />
                            <Label layoutX="223.0" layoutY="244.0" text="Datum" />
                            <Label layoutX="22.0" layoutY="109.0" text="Distance" />
+                           <Button fx:id="Import" layoutX="644.0" layoutY="159.0" mnemonicParsing="false" text="import" onAction="#importJS"  />
+                           <Button fx:id="Export" layoutX="644.0" layoutY="198.0" mnemonicParsing="false" text="export" onAction="#exportJS"  />
                         </children></AnchorPane>
                     </content>
                 </Tab>
@@ -109,6 +111,7 @@
      <buttons>
        <Button fx:id="DeleteLog" mnemonicParsing="false" onAction="#deleteLog" text="Delete" />
          <Button fx:id="CopyLog" mnemonicParsing="false" onAction="#copyLog" text="Copy" />
+         <Button fx:id="TourRepo" mnemonicParsing="false" text="Tour report" onAction="#TourReport"  />
      </buttons>
    </ButtonBar>
 </VBox>

@@ -40,6 +40,13 @@ public class LogsViewController implements Initializable {
     @FXML
     private NumberAxis Y;
     @FXML
+    private Button Import;
+
+    @FXML
+    private Button Export;
+    @FXML
+    private Button TourRepo;
+    @FXML
     private LineChart<?, ?> LineChart;
 
     @FXML
@@ -142,7 +149,24 @@ public class LogsViewController implements Initializable {
 
     public void print(ActionEvent event) throws IOException {
         if(event.getSource()==Print){
-            viewModelLogs.getPdf();
+            viewModelLogs.getFullPdf();
+        }
+    }
+
+    public void TourReport(ActionEvent event) throws IOException {
+        if(event.getSource()==TourRepo){
+            viewModelLogs.getTourPdf();
+        }
+    }
+
+    public void exportJS(ActionEvent event) {
+        if(event.getSource()==Export){
+            viewModelLogs.exportJS();
+        }
+    }
+    public void importJS(ActionEvent event) {
+        if(event.getSource()==Import){
+            viewModelLogs.importJS();
         }
     }
 }

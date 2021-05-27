@@ -12,6 +12,7 @@ import org.rajoub.business_layer.LogsService;
 import org.rajoub.model.Log;
 import org.rajoub.util.MapquestApiService;
 import org.rajoub.util.PdfGenerator;
+import org.rajoub.util.Statistics;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -24,11 +25,13 @@ public class ViewModelLogs {
     private final LogsService logsService;
     private final MapquestApiService mapquestApiService;
     private final PdfGenerator pdfGenerator;
+    private final Statistics statistics;
     private ObservableList<Log> observableLogs = FXCollections.observableArrayList();
     FilteredList<Log> searchedLogs = new FilteredList<>(observableLogs, s -> true);
     private  final StringProperty from = new SimpleStringProperty();
     private final StringProperty to = new SimpleStringProperty();
     private final ObjectProperty<Image> imagTour = new SimpleObjectProperty<>();
+    private final ObjectProperty<String> SelectedTour = new SimpleObjectProperty<>();
 
     public ObservableList<Log> getLogs() {
         observableLogs.clear();
@@ -67,9 +70,20 @@ public class ViewModelLogs {
         getLogs();
     }
 
-    public void getPdf() throws IOException {
-        pdfGenerator.DownloadPdf();
+    public void getFullPdf() throws IOException {
+        pdfGenerator.DownloadFullPdf();
     }
 
 
+    public void getTourPdf() throws IOException {
+        pdfGenerator.DownloadTourPdf(getSelectedTour().getValue());
+    }
+
+    public void exportJS() {
+        statistics.exportJS();
+    }
+
+    public void importJS() {
+        statistics.importJS();
+    }
 }

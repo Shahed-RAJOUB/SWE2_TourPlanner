@@ -54,6 +54,7 @@ public class ViewModelTours {
     public void setLogs(String tourName) {
         if(tourName!=null) {
             viewModelLogs.getSearchedLogs().setPredicate(l -> l.getTourName().toLowerCase().contains(tourName.toLowerCase()));
+            viewModelLogs.getSelectedTour().setValue(tourName);
             viewModelLogs.getLogs();
         }
     }
