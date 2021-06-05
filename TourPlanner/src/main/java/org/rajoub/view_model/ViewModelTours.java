@@ -1,8 +1,8 @@
 package org.rajoub.view_model;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -18,13 +18,11 @@ import java.sql.SQLException;
 @RequiredArgsConstructor
 @Getter
 @Setter
-
 public class ViewModelTours {
     private final ToursService toursService;
     private final ViewModelLogs viewModelLogs;
     private ObservableList<Tour> observableTours = FXCollections.observableArrayList();
     FilteredList<Tour> searchedTours = new FilteredList<>(observableTours, s -> true);
-
 
     public ObservableList<Tour>  getTours() {
         observableTours.clear();
@@ -65,5 +63,9 @@ public class ViewModelTours {
             viewModelLogs.getTo().setValue(to);
             viewModelLogs.getImage();
         }
+    }
+
+    public void refresh() {
+        getTours();
     }
 }

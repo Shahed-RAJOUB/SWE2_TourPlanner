@@ -1,5 +1,6 @@
 package org.rajoub.views;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -10,6 +11,7 @@ import lombok.extern.log4j.Log4j;
 import org.rajoub.view_model.ViewModelMain;
 import org.springframework.stereotype.Controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 @Controller
@@ -21,7 +23,11 @@ public class MainController implements Initializable {
 
     @FXML
     private Menu menuFile;
+    @FXML
+    private Menu Import;
 
+    @FXML
+    private Menu Export;
     @FXML
     private MenuItem getReport;
 
@@ -54,4 +60,5 @@ public class MainController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         log.info("to edit in tourViewController");
     }
+
 }

@@ -159,7 +159,7 @@ public class LogsViewController implements Initializable {
         }
     }
 
-    public void exportJS(ActionEvent event) {
+    public void exportJS(ActionEvent event) throws IOException {
         if(event.getSource()==Export){
             viewModelLogs.exportJS();
         }

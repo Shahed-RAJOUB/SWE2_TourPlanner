@@ -1,5 +1,6 @@
 package org.rajoub.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public class Tour {
     public String from;
     public String to;
     public List<Log> tourLogs;
-
+    public Tour(){}  // empty constructor
     public Tour(int tourId , String tourName , String from , String to) {
         this.tourId = tourId;
         this.tourName = tourName;

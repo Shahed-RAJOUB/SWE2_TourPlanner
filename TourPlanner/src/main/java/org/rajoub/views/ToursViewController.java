@@ -21,7 +21,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import lombok.extern.log4j.Log4j;
 import org.rajoub.model.Tour;
-import org.rajoub.view_model.ViewModelLogs;
 import org.rajoub.view_model.ViewModelTours;
 import org.springframework.stereotype.Controller;
 
@@ -60,6 +59,9 @@ public class ToursViewController implements Initializable {
 
     @FXML
     private Button CopyTour;
+
+    @FXML
+    private Button Refresh;
 
     private final ViewModelTours viewModelTours;
 
@@ -105,6 +107,12 @@ public class ToursViewController implements Initializable {
         if( getSelectedTour() != null){
             viewModelTours.setLogs(getSelectedTour().getTourName());
             viewModelTours.setRout(getSelectedTour().getFrom(),getSelectedTour().getTo() );
+        }
+    }
+
+    public void refresh(ActionEvent event) {
+        if(event.getSource()==Refresh){
+            viewModelTours.refresh();
         }
     }
 }

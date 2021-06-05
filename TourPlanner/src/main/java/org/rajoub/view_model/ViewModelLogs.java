@@ -13,6 +13,7 @@ import org.rajoub.model.Log;
 import org.rajoub.util.MapquestApiService;
 import org.rajoub.util.PdfGenerator;
 import org.rajoub.util.Statistics;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -21,6 +22,7 @@ import java.sql.SQLException;
 @RequiredArgsConstructor
 @Getter
 @Setter
+
 public class ViewModelLogs {
     private final LogsService logsService;
     private final MapquestApiService mapquestApiService;
@@ -32,6 +34,7 @@ public class ViewModelLogs {
     private final StringProperty to = new SimpleStringProperty();
     private final ObjectProperty<Image> imagTour = new SimpleObjectProperty<>();
     private final ObjectProperty<String> SelectedTour = new SimpleObjectProperty<>();
+
 
     public ObservableList<Log> getLogs() {
         observableLogs.clear();
@@ -85,5 +88,6 @@ public class ViewModelLogs {
 
     public void importJS() {
         statistics.importJS();
+        getLogs();
     }
 }
