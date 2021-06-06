@@ -34,7 +34,7 @@ public class Statistics {
                 List<Log> tourLogs = new ArrayList<>();
                 for (int x = 0; x < logsService.GetLogs().size(); x++) {
                     if (logsService.GetLogs().get(x).tourName.equals(toursService.GetTours().get(i).tourName)) {
-                        Log log = new Log(logsService.GetLogs().get(x).id ,  logsService.GetLogs().get(x).date ,logsService.GetLogs().get(x).duration , logsService.GetLogs().get(x).dest , logsService.GetLogs().get(x).burnedCalories , logsService.GetLogs().get(x).tourName);
+                        Log log = new Log(logsService.GetLogs().get(x).id ,  logsService.GetLogs().get(x).date ,logsService.GetLogs().get(x).duration , logsService.GetLogs().get(x).dest , logsService.GetLogs().get(x).burnedCalories , logsService.GetLogs().get(x).tourName , logsService.GetLogs().get(x).ratings );
                        tourLogs.add(log);
                     }
                 }
@@ -63,7 +63,7 @@ public class Statistics {
                 String newNameTour = tours.get(i).tourName+"imported"+RandomString();
                 toursService.insertTour(newNameTour , tours.get(i).from , tours.get(i).to );
                 for (int x = 0 ; x < tours.get(i).tourLogs.size() ; x++){
-                    logsService.insertLog(tours.get(i).tourLogs.get(x).date , tours.get(i).tourLogs.get(x).duration , tours.get(i).tourLogs.get(x).dest , newNameTour);
+                    logsService.insertLog(tours.get(i).tourLogs.get(x).date , tours.get(i).tourLogs.get(x).duration , tours.get(i).tourLogs.get(x).dest , newNameTour , tours.get(i).tourLogs.get(x).ratings);
                 }
             }
 

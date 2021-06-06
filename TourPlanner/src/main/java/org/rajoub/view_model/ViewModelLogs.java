@@ -13,7 +13,6 @@ import org.rajoub.model.Log;
 import org.rajoub.util.MapquestApiService;
 import org.rajoub.util.PdfGenerator;
 import org.rajoub.util.Statistics;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -42,10 +41,10 @@ public class ViewModelLogs {
         return searchedLogs;
     }
 
-    public void insertLog(String date, String dur, String dest, String tour) throws SQLException {
+    public void insertLog(String date, String dur, String dest, String tour , String ratings) throws SQLException {
         float duration=Float.parseFloat(dur);
         float destination=Float.parseFloat(dest);
-        logsService.insertLog(date,duration,destination,tour);
+        logsService.insertLog(date,duration,destination,tour,ratings);
         getLogs();
     }
 
@@ -62,8 +61,8 @@ public class ViewModelLogs {
         logsService.deleteLog(id);
         getLogs();
     }
-    public void copyLog(String date, Float duration, Float destination, String tourName) throws SQLException{
-        logsService.copyLog(date,duration,destination,tourName);
+    public void copyLog(String date, Float duration, Float destination, String tourName , String ratings) throws SQLException{
+        logsService.copyLog(date,duration,destination,tourName , ratings);
         getLogs();
     }
     public void EditTLog(String date, String dur, String dest, String tourName , int id) throws SQLException{

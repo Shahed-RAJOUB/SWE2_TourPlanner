@@ -1,9 +1,7 @@
 package org.rajoub.business_layer;
 
 import lombok.RequiredArgsConstructor;
-import org.rajoub.data_access_layer.LogDAO;
 import org.rajoub.data_access_layer.TourDAO;
-import org.rajoub.model.Log;
 import org.rajoub.model.Tour;
 import org.springframework.stereotype.Component;
 

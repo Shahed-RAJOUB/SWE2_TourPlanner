@@ -1,6 +1,5 @@
 package org.rajoub.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.util.List;
@@ -24,8 +23,17 @@ public class Tour {
         this.to = to;
     }
 
+    public Tour(String tour, String from, String to) {
+        this.tourName = tour;
+        this.from = from;
+        this.to = to;
+    }
+
     @Override
     public String toString() {
         return this.tourName;
+    }
+    public Tour(String tourName){
+        this.tourName = tourName;
     }
 }

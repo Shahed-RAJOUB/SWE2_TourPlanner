@@ -16,8 +16,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import validation.* ?>
+<?imort validation.* ?>
 
+<?import validation.FloatTextFieldValidation?>
 <VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.rajoub.views.LogsViewController">
 <SplitPane dividerPositions="0.5" orientation="VERTICAL">
     <items>
@@ -50,8 +51,8 @@
                            <Label layoutX="223.0" layoutY="25.0" text="Progress Chart" />
                            <Label layoutX="223.0" layoutY="244.0" text="Datum" />
                            <Label layoutX="22.0" layoutY="109.0" text="Distance" />
-                           <Button fx:id="Import" layoutX="644.0" layoutY="159.0" mnemonicParsing="false" text="import" onAction="#importJS"  />
-                           <Button fx:id="Export" layoutX="644.0" layoutY="198.0" mnemonicParsing="false" text="export" onAction="#exportJS"  />
+                           <Button fx:id="Import" layoutX="644.0" layoutY="159.0" mnemonicParsing="false" onAction="#importJS" text="import" />
+                           <Button fx:id="Export" layoutX="644.0" layoutY="198.0" mnemonicParsing="false" onAction="#exportJS" text="export" />
                         </children></AnchorPane>
                     </content>
                 </Tab>
@@ -67,6 +68,7 @@
                                 <TableColumn fx:id="tableDuration" prefWidth="188.0" text="Duration" />
                                 <TableColumn fx:id="tableDistance" prefWidth="210.0" text="Distance" />
                                 <TableColumn fx:id="BurnedCalories" prefWidth="228.0" text="Burned Calories" />
+                                <TableColumn fx:id="Ratings" prefWidth="246.0" text="Ratings" />
                             </columns>
                         </TableView>
                     </content>
@@ -83,7 +85,9 @@
                                 <FloatTextFieldValidation fx:id="LogDestination" layoutX="99.0" layoutY="114.0" />
                                 <Label layoutX="26.0" layoutY="156.0" text="Tour Name" />
                                 <TextField fx:id="LogTour" layoutX="99.0" layoutY="150.0" />
-                                <Button fx:id="AddLog" layoutX="189.0" layoutY="186.0" mnemonicParsing="false" onAction="#addLog" text="insert" />
+                                <Label layoutX="26.0" layoutY="193.0" text="LogRating" />
+                                <TextField fx:id="LogRating" layoutX="98.0" layoutY="189.0" />
+                                <Button fx:id="AddLog" layoutX="189.0" layoutY="223.0" mnemonicParsing="false" onAction="#addLog" text="insert" />
                             </children></AnchorPane>
                     </content>
                 </Tab>
@@ -112,7 +116,7 @@
      <buttons>
        <Button fx:id="DeleteLog" mnemonicParsing="false" onAction="#deleteLog" text="Delete" />
          <Button fx:id="CopyLog" mnemonicParsing="false" onAction="#copyLog" text="Copy" />
-         <Button fx:id="TourRepo" mnemonicParsing="false" text="Tour report" onAction="#TourReport"  />
+         <Button fx:id="TourRepo" mnemonicParsing="false" onAction="#TourReport" text="Tour report" />
      </buttons>
    </ButtonBar>
 </VBox>

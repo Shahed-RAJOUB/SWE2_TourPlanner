@@ -29,7 +29,7 @@ public class LogDAO implements LogDataAccess {
             rs = statement.executeQuery();
             Log logs;
             while (rs.next()) {
-                logs = new Log(rs.getInt("id"), rs.getString("date"), rs.getFloat("duration"), rs.getFloat("destination"), rs.getFloat("calories"), rs.getString("url"), rs.getString("tour_name"));
+                logs = new Log(rs.getInt("id"), rs.getString("date"), rs.getFloat("duration"), rs.getFloat("destination"), rs.getFloat("calories"), rs.getString("url"), rs.getString("tour_name"), rs.getString("ratings"));
                 logsList.add(logs);
             }
         } catch (Exception e) {
@@ -41,9 +41,9 @@ public class LogDAO implements LogDataAccess {
     }
 
     @Override
-    public void insertNewLog(String date, Float duration, Float destination, String tourName) throws SQLException {
+    public void insertNewLog(String date, Float duration, Float destination, String tourName , String ratings) throws SQLException {
         float calories = 6 * (duration / 60) * 80;
-        String query1 = "INSERT INTO \"Logs\" VALUES (DEFAULT , ?, ?, ? , ? , ? , ?)";
+        String query1 = "INSERT INTO \"Logs\" VALUES (DEFAULT , ?, ?, ? , ? , ? , ? , ?)";
         PreparedStatement statement = connection.getC().prepareStatement(query1);
         statement.setString(1, date);
         statement.setFloat(2, duration);
@@ -51,6 +51,7 @@ public class LogDAO implements LogDataAccess {
         statement.setFloat(4, calories);
         statement.setString(5, "URL");
         statement.setString(6, tourName);
+        statement.setString(7, ratings);
         statement.executeUpdate();
         connection.getC().commit();
         statement.close();
@@ -67,8 +68,8 @@ public class LogDAO implements LogDataAccess {
     }
 
     @Override
-    public void copyLog(String date, Float duration, Float destination, String tourName) throws SQLException {
-        insertNewLog(date,duration ,destination ,tourName);
+    public void copyLog(String date, Float duration, Float destination, String tourName , String ratings) throws SQLException {
+        insertNewLog(date,duration ,destination ,tourName , ratings);
     }
 
     @Override

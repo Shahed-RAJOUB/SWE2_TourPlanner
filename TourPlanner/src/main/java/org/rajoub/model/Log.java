@@ -16,14 +16,19 @@ public class Log {
     public Float burnedCalories;
     public String url;
     public String tourName;
+    public String ratings;
     public Log(){}
 
-    public Log(int id, String date, float duration, float destination, float calories, String tourName) {
+    public Log(int id, String date, float duration, float destination, float calories, String tourName , String ratings) {
         this.id = id;
         this.date = date;
         this.dest = destination;
         this.duration = duration;
         this.burnedCalories = calories;
         this.tourName = tourName;
+        this.ratings = ratings;
+    }
+    public Log(int id){
+        this.id=id;
     }
 }

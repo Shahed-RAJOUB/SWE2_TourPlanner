@@ -65,6 +65,9 @@ public class LogsViewController implements Initializable {
     private TableColumn<Log, Float> BurnedCalories;
 
     @FXML
+    private TableColumn<Log, String> Ratings;
+
+    @FXML
     private DatePicker LogDate;
 
     @FXML
@@ -75,6 +78,8 @@ public class LogsViewController implements Initializable {
 
     @FXML
     private TextField LogTour;
+    @FXML
+    private TextField LogRating;
 
     @FXML
     private Button AddLog;
@@ -113,12 +118,13 @@ public class LogsViewController implements Initializable {
         tableDuration.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getDuration()));
         tableDistance.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getDest()));
         BurnedCalories.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getBurnedCalories()));
+        Ratings.setCellValueFactory(log -> new SimpleObjectProperty<>(log.getValue().getRatings()));
         urlImage.imageProperty().bind(viewModelLogs.getImagTour());
     }
     @FXML
     public void addLog(ActionEvent event) throws SQLException {
         if(event.getSource()==AddLog){
-            viewModelLogs.insertLog(LogDate.getValue().toString() , LogDuration.getText() , LogDestination.getText(), LogTour.getText());
+            viewModelLogs.insertLog(LogDate.getValue().toString() , LogDuration.getText() , LogDestination.getText(), LogTour.getText() , LogRating.getText());
            getLogDate().setValue(null);
            getLogDuration().setText(null);
            getLogDestination().setText(null);
@@ -134,7 +140,7 @@ public class LogsViewController implements Initializable {
     @FXML
     void  copyLog(ActionEvent event)throws SQLException {
         if(event.getSource()==CopyLog){
-            viewModelLogs.copyLog(getSelectedLog().getDate(),getSelectedLog().getDuration(),getSelectedLog().getDest(),getSelectedLog().getTourName());
+            viewModelLogs.copyLog(getSelectedLog().getDate(),getSelectedLog().getDuration(),getSelectedLog().getDest(),getSelectedLog().getTourName(),getSelectedLog().getRatings());
         }
     }
     @FXML

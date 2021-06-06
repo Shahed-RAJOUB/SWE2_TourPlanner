@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 
 
 import javafx.scene.input.MouseEvent;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;

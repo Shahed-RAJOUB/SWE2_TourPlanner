@@ -17,15 +17,15 @@ public class LogsService  {
         return logDAO.GetLogs();
     }
 
-    public void insertLog(String date , Float duration , Float destination , String tourname) throws SQLException {
-        logDAO.insertNewLog(date , duration , destination, tourname);
+    public void insertLog(String date , Float duration , Float destination , String tourname , String ratings) throws SQLException {
+        logDAO.insertNewLog(date , duration , destination, tourname , ratings);
     }
 
     public void deleteLog(int id) throws SQLException{
         logDAO.deleteLog(id);
     }
-   public void copyLog(String date, Float duration, Float destination, String tourName) throws SQLException{
-        logDAO.copyLog(date,duration,destination,tourName);
+   public void copyLog(String date, Float duration, Float destination, String tourName , String ratings) throws SQLException{
+        logDAO.copyLog(date,duration,destination,tourName , ratings);
    }
    public void EditTLog(String date, Float duration, Float destination, String tourName , int id) throws SQLException{
         logDAO.EditTLog(date,duration,destination,tourName,id);
